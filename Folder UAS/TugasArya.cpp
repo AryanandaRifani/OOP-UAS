@@ -1,9 +1,10 @@
-
 #include <iostream>
+#include <windows.h>
+#include <stdio.h>
 using namespace std;
 
 
-class bangun_ruang
+class bangun_ruang //class bangun ruang bersifat publik, jadi semua bisa akses
 {
 public:
     
@@ -13,7 +14,8 @@ public:
 
 
     void kubus()
-    {
+	{
+		system("cls");
         cout<<endl;
         cout<<"\"Menghitung Luas Permukaan Kubus \""<<endl;
         cout<<" Masukkan Nilai sisi  : ";cin>>s;
@@ -25,14 +27,16 @@ public:
         cout<<" Masukkan Nilai sisi : ";cin>>s;
         vo=s*s*s;
         cout<<" Volume Kubus        : "<<vo<<endl;
+        system("pause");
     }
     
     void kerucut()
-     {
+    {
+     	system("cls");
         cout<<endl;
         cout<<"\"Menghitung Luas Permukaan Kerucut \""<<endl;
-        cout<<" Masukkan Nilai Luas Alas : ";cin>>la;
-        cout<<" Masukkan Nilai Luas Selimut: ";cin>>ls;
+        cout<<" Masukkan Nilai Luas Alas      : ";cin>>la;
+        cout<<" Masukkan Nilai Luas Selimut   : ";cin>>ls;
         lu=la*ls;
         cout<<" Luas Permukaan Kerucut        : "<<lu<<endl;
 
@@ -42,44 +46,50 @@ public:
         cout<<" Masukkan Nilai Tinggi Kerucut : ";cin>>t;
         vo=0.333*3.14*s*s*t;
         cout<<" Volume Kerucut                : "<<vo<<endl;
+        system("pause");
     }
 
     void limas()
     {
+    	system("cls");
         cout<<endl;
         cout<<"\"Menghitung Luas Permukaan Limas \""<<endl;
         cout<<" Masukkan Nilai Luas Alas : ";cin>>la;
         cout<<" Masukkan Nilai Jumlah Sisi Tegak  : ";cin>>st;
         lu=la*st;
-        cout<<" Luas Permukaan Limas                  : "<<lu<<endl;
+        cout<<" Luas Permukaan Limas              : "<<lu<<endl;
 
         cout<<endl;
         cout<<"\"Menghitung Volume Limas \""<<endl;
         cout<<" Masukkan Nilai Jumlah Sisi Tegak : ";cin>>st;
         vo=0.333*st;
-        cout<<" Volume Limas                          : "<<vo<<endl;
+        cout<<" Volume Limas                     : "<<vo<<endl;
+        system("pause");
     }
 
     void tabung()
     {
+		system("cls");
         cout<<endl;
         cout<<"\"Menghitung Luas Permukaan Tabung \""<<endl;
         cout<<" Masukkan Nilai Luas Alas    : ";cin>>la;
         cout<<" Masukkan Nilai Luas Selimut : ";cin>>ls;
         lu=la*ls;
-        cout<<" Luas Permukaan Kubus         : "<<lu<<endl;
+        cout<<" Luas Permukaan Kubus        : "<<lu<<endl;
 
         cout<<endl;
         cout<<"\"Menghitung Volume Tabung \""<<endl;
         cout<<" Masukkan Nilai Luas Alas    : ";cin>>la;
-        cout<<" Masukkan Nilai Tinggi Tabung : ";cin>>t;
+        cout<<" Masukkan Nilai Tinggi Tabung: ";cin>>t;
         vo=la*t;
         cout<<" Volume Tabung               : "<<lu<<endl;
+        system("pause");
     }
 
 
     void bola()
     {
+    	system("cls");
         cout<<endl;
         cout<<"\"Menghitung Luas Permukaan Bola \""<<endl;
         cout<<" Masukkan Nilai Jari-jari : ";cin>>r;
@@ -91,7 +101,9 @@ public:
         cout<<" Masukkan Nilai Jari-jari : ";cin>>r;
         vo=4/3*3.14*r*r*r;
         cout<<" Volume Bola              : "<<vo<<endl;
+        system("pause");
     }
+    
 
 };
 
@@ -101,6 +113,7 @@ int main()
 {    
     int pilih;
 atas:
+		system("cls");
         cout<<" Menu Bangun Ruang: "<<endl;
         cout<<"1.KUBUS"<<endl;
         cout<<"2.KERUCUT"<<endl;
@@ -135,6 +148,5 @@ atas:
     system("pause");
     return 0;
 }
-
 
 }
